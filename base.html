@@ -21,14 +21,21 @@
                 <span class="cantidad">0</span>
                 <button onclick="
                 let cantidad = document.querySelector('.cantidad');
-                numero = Number(cantidad.innerHTML);
+                let numero = Number(cantidad.innerHTML);
                 cantidad.innerHTML = numero + 1;
-                "
-                >+</button>
+
+                let precio = 400000
+                let totalAPagar = document.querySelector('.valor-total');
+                totalAPagar.innerHTML = cantidad.innerHTML * precio;
+                ">+</button>
                 <button onclick="
-                let cantidad = document.querySelector('.cantidad');
+                cantidad = document.querySelector('.cantidad');
                 numero = Number(cantidad.innerHTML);
                 cantidad.innerHTML = Math.max(0,numero - 1);
+
+                precio = 400000
+                totalAPagar = document.querySelector('.valor-total');
+                totalAPagar.innerHTML = cantidad.innerHTML * precio;
                 ">-</button>
             </p>
         </div>
