@@ -12,4 +12,7 @@ precioAPagar = document.querySelector(".valor-total");
 precioAPagar.innerHTML = precioTotal;
 
 
+suma = document.querySelector(".suma")
+
+
 

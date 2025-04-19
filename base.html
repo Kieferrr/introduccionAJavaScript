@@ -14,17 +14,24 @@
     <section>
         <div class="card">
             <div class="img-card"></div>
-              <h6>Laptop Gamer AMD</h6>
-              <p>Precio base: $<span class="precio-inicial"></span> </p>
-        
-              <p>Cantidad:
+            <h6>Laptop Gamer AMD</h6>
+            <p>Precio base: $<span class="precio-inicial"></span> </p>
+
+            <p>Cantidad:
                 <span class="cantidad">0</span>
-                <button 
+                <button onclick="
+                let cantidad = document.querySelector('.cantidad');
+                numero = Number(cantidad.innerHTML);
+                cantidad.innerHTML = numero + 1;
+                "
                 >+</button>
-                <button
-                >-</button>
-              </p>
-            </div>
+                <button onclick="
+                let cantidad = document.querySelector('.cantidad');
+                numero = Number(cantidad.innerHTML);
+                cantidad.innerHTML = Math.max(0,numero - 1);
+                ">-</button>
+            </p>
+        </div>
 
         </div>
     </section>
@@ -34,8 +41,9 @@
     </div>
 
     <script src="assets/js/index.js">
-      
+
 
     </script>
 </body>
+
 </html>
